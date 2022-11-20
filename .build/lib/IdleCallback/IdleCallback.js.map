@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../lib/IdleCallback/IdleCallback.js"],
+  "sourcesContent": ["\nvar wandow = window || self || this;\n\nfunction doSoon(fun){\n\nreturn setTimeout(fun,10);\n\n}\n\nwandow.setImpendingCallback = doSoon;\n\nwandow.requestAnimationFrame = wandow.requestAnimationFrame || wandow.mozRequestAnimationFrame ||\nwandow.webkitRequestAnimationFrame || wandow.msRequestAnimationFrame\nwandow.requestIdleCallback || wandow.setImpendingCallback;\n\nwandow.mozRequestAnimationFrame = wandow.requestAnimationFrame;\nwandow.webkitRequestAnimationFrame = wandow.requestAnimationFrame;\nwandow.msRequestAnimationFrame = wandow.requestAnimationFrame;\n\nwandow.cancelAnimationFrame = wandow.cancelAnimationFrame || wandow.mozCancelAnimationFrame || wandow.cancelIdleCallback || wandow.clearTimeout;\n\nwandow.mozCancelAnimationFrame = wandow.cancelAnimationFrame;\n\nwandow.requestIdleCallback = wandow.requestIdleCallback || wandow.requestAnimationFrame;\n\nwandow.cancelIdleCallback = wandow.cancelIdleCallback || wandow.cancelAnimationFrame || wandow.clearTimeout;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"],
+  "mappings": "AACA,IAAI,SAAS,UAAU,QAAQ;AAE/B,gBAAgB,KAAI;AAEpB,SAAO,WAAW,KAAI;AAAA;AAItB,OAAO,uBAAuB;AAE9B,OAAO,wBAAwB,OAAO,yBAAyB,OAAO,4BACtE,OAAO,+BAA+B,OAAO;AAC7C,OAAO,uBAAuB,OAAO;AAErC,OAAO,2BAA2B,OAAO;AACzC,OAAO,8BAA8B,OAAO;AAC5C,OAAO,0BAA0B,OAAO;AAExC,OAAO,uBAAuB,OAAO,wBAAwB,OAAO,2BAA2B,OAAO,sBAAsB,OAAO;AAEnI,OAAO,0BAA0B,OAAO;AAExC,OAAO,sBAAsB,OAAO,uBAAuB,OAAO;AAElE,OAAO,qBAAqB,OAAO,sBAAsB,OAAO,wBAAwB,OAAO;",
+  "names": []
+}
