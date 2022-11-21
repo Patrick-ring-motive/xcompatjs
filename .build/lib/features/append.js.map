@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../lib/features/append.js"],
+  "sourcesContent": ["Element.prototype.append = Element.prototype.append || Element.prototype.appendChild;\n\n"],
+  "mappings": "AAAA,QAAQ,UAAU,SAAS,QAAQ,UAAU,UAAU,QAAQ,UAAU;",
+  "names": []
+}
