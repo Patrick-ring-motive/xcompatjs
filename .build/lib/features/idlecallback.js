@@ -4,9 +4,16 @@ wandow.clearStub = function() {
 };
 function doSoon(fun) {
   if (wandow.setTimeout) {
-    return wandow.setTimeout(fun, 0);
+    return wandow.setTimeout(fun, 10);
   } else if (wandow.queueMicrotask) {
     return wandow.queueMicrotask(fun);
+  } else {
+    return fun();
+  }
+}
+function doNow(fun) {
+  if (wandow.setTimeout) {
+    return wandow.setTimeout(fun, 0);
   } else {
     return fun();
   }
@@ -21,5 +28,5 @@ wandow.cancelAnimationFrame = wandow.cancelAnimationFrame || wandow.mozCancelAni
 wandow.mozCancelAnimationFrame = wandow.cancelAnimationFrame;
 wandow.requestIdleCallback = wandow.requestIdleCallback || wandow.requestAnimationFrame;
 wandow.cancelIdleCallback = wandow.cancelIdleCallback || wandow.cancelAnimationFrame || wandow.clearTimeout || wandow.clearStub;
-wandow.queueMicrotask = wandow.queueMicrotask || wandow.requestIdleCallback;
+wandow.queueMicrotask = wandow.queueMicrotask || doNow;
 //# sourceMappingURL=idlecallback.js.map
