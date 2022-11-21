@@ -48,7 +48,12 @@ Node.prototype.beforeNode = function() {
   }
 };
 Node.prototype.insertAfter = function() {
-  this.insertBefore(arguments[0], arguments[1].nextSibling);
+  if (arguments[1].nextSibling) {
+    this.insertBefore(arguments[0], arguments[1].nextSibling);
+  } else {
+    this.insertBefore(arguments[0], arguments[1]);
+    this.insertBefore(arguments[1], arguments[0]);
+  }
 };
 Node.prototype.afterNode = function() {
   var after_arguments_length = arguments.length;
@@ -82,8 +87,15 @@ Node.prototype.adjacent = function() {
   }
   return adjacent_element;
 };
+Node.prototype.adjacentHTML = function() {
+  var adjacent_parser = new DOMParser();
+  return this.adjacent(arguments[0], adjacent_parser.parseFromString(arguments[1], "text/html"));
+};
 Node.prototype.append = Node.prototype.append || Node.prototype.appendChildren;
 Node.prototype.prepend = Node.prototype.prepend || Node.prototype.prependChildren;
 Node.prototype.before = Node.prototype.before || Node.prototype.beforeNode;
 Node.prototype.after = Node.prototype.after || Node.prototype.afterNode;
+Node.prototype.insertAdjacentElement = Node.prototype.insertAdjacentElement || Node.prototype.adjacent;
+Node.prototype.insertAdjacentText = Node.prototype.insertAdjacentText || Node.prototype.adjacent;
+Node.prototype.insertAdjacentHTML = Node.prototype.insertAdjacentHTML || Node.prototype.adjacentHTML;
 //# sourceMappingURL=append.js.map
