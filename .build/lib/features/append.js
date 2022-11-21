@@ -48,8 +48,9 @@ Node.prototype.beforeNode = function() {
   }
 };
 Node.prototype.insertAfter = function() {
-  if (arguments[1].nextSibling) {
-    this.insertBefore(arguments[0], arguments[1].nextSibling);
+  var after_sibling = arguments[1].nextSibling || arguments[1].nextElementSibling;
+  if (after_sibling) {
+    this.insertBefore(arguments[0], after_sibling);
   } else {
     this.insertBefore(arguments[0], arguments[1]);
     this.insertBefore(arguments[1], arguments[0]);
