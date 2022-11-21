@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../../lib/features/append.js"],
-  "sourcesContent": ["Element.prototype.append = Element.prototype.append || Element.prototype.appendChild;\n\n"],
-  "mappings": "AAAA,QAAQ,UAAU,SAAS,QAAQ,UAAU,UAAU,QAAQ,UAAU;",
+  "sourcesContent": ["function appendChildren(){\nvar append_arguments_length = arguments.length;\nfor(var append_i=0;append_i<append_arguments_length;append_i++){\nvar append_element = arguments[append_i];\n  if(typeof append_element === \"string\"){}\n  \n  \n}\n  \n}\n\nNode.prototype.append = Node.prototype.append || appendChildren;\n\n"],
+  "mappings": "AAAA,0BAAyB;AACzB,MAAI,0BAA0B,UAAU;AACxC,WAAQ,WAAS,GAAE,WAAS,yBAAwB,YAAW;AAC/D,QAAI,iBAAiB,UAAU;AAC7B,QAAG,OAAO,mBAAmB,UAAS;AAAA;AAAA;AAAA;AAOxC,KAAK,UAAU,SAAS,KAAK,UAAU,UAAU;",
   "names": []
 }

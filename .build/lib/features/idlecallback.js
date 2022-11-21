@@ -22,4 +22,4 @@ wandow.mozCancelAnimationFrame = wandow.cancelAnimationFrame;
 wandow.requestIdleCallback = wandow.requestIdleCallback || wandow.requestAnimationFrame;
 wandow.cancelIdleCallback = wandow.cancelIdleCallback || wandow.cancelAnimationFrame || wandow.clearTimeout || wandow.clearStub;
 wandow.queueMicrotask = wandow.queueMicrotask || wandow.requestIdleCallback;
-//# sourceMappingURL=IdleCallback.js.map
+//# sourceMappingURL=idlecallback.js.map
