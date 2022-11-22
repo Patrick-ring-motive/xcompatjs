@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body bgcolor="#dae1ed">
+  <script src="https://patrick-ring-motive.github.io/xcompatjs/lib/features/append.js"
+    href="https://patrick-ring-motive.github.io/xcompatjs/lib/features/append.js"
+    xlink:href="https://patrick-ring-motive.github.io/xcompatjs/lib/features/append.js"></script>
+  <script src="https://patrick-ring-motive.github.io/xcompatjs/lib/features/idlecallback.js"
+    href="https://patrick-ring-motive.github.io/xcompatjs/lib/features/idlecallback.js"
+    xlink:href="https://patrick-ring-motive.github.io/xcompatjs/lib/features/idlecallback.js"></script>
+  <script src="xmlForge.js" href="xmlForge.js" xlink:href="xmlForge.js"></script>
+  <script defer type="module" loading="lazy" fetchpriority="low">
+    /* <![CDATA[/* */
+    document.addEventListener("DOMContentLoaded", function (event) {
+      requestIdleCallback(function () {
+        setTimeout(function () {// please just wait until the iframe is loaded before using it
+
+
+
+          var t = document.createXMLElement('p');
+          console.log({t}, t.namespaceURI);
+
+
+
+
+
+        }, 100);
+      });
+    });
+    /* ]]>/* */
+  </script>
+
+</body>
+
+</html>
