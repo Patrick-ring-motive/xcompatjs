@@ -20,8 +20,12 @@
 
       var t = document.createXHTMLElement('P');
       console.log({t}, t.namespaceURI);
-      t.innerText='This is and xhtml element. Namespace:'+t.namespaceURI;
+      t.innerText='This is an xhtml element P. Namespace:'+t.namespaceURI;
       document.body.appendChild(t);
+
+      var h = document.createElement('P');
+            h.innerText='This is an html element P. Namespace:'+h.namespaceURI;
+      document.body.appendChild(h);
 
 
 
