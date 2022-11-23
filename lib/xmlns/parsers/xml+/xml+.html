@@ -17,10 +17,11 @@
 
 
 
-          var t = document.createXHTMLElement('p');
+          var t = document.createWSDLElement('p');
           console.log({t}, t.namespaceURI);
 
-
+      t.innerText='This is and wsdl element. Namespace:'+t.namespaceURI;
+      document.body.appendChild(t);
 
 
 
