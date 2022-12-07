@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../lib/xmlns/inline/svg/svgForge.js"],
+  "sourcesContent": [" /* <![CDATA[/* */\n\nvar SVGForge = document.createElement('div');\nSVGForge.style.visibility = 'hidden';\nSVGForge.style.maxHeight = '0px';\nSVGForge.innerHTML = '<svg id=\"SVGForge\" style=\"visibility: hidden; max-height: 0px;\"></svg>';\n\nvar SVGStage = document.createElement('div');\nSVGStage.id = 'SVGStage';\nSVGStage.style.visibility = 'hidden';\nSVGStage.style.maxHeight = '0px';\n\ndocument.body.appendChild(SVGForge);\ndocument.body.appendChild(SVGStage);\n\n\ndocument.createSVGElement = function(tag) {\n\n  document.getElementById('SVGForge').innerHTML = '<' + tag + '></' + tag + '>';\n  let tg = document.getElementById('SVGForge').firstElementChild;\n\n  document.getElementById('SVGStage').appendChild(tg);\n  return tg;\n\n}\n/* ]]>/* */"],
+  "mappings": "AAEA,IAAI,WAAW,SAAS,cAAc;AACtC,SAAS,MAAM,aAAa;AAC5B,SAAS,MAAM,YAAY;AAC3B,SAAS,YAAY;AAErB,IAAI,WAAW,SAAS,cAAc;AACtC,SAAS,KAAK;AACd,SAAS,MAAM,aAAa;AAC5B,SAAS,MAAM,YAAY;AAE3B,SAAS,KAAK,YAAY;AAC1B,SAAS,KAAK,YAAY;AAG1B,SAAS,mBAAmB,SAAS,KAAK;AAExC,WAAS,eAAe,YAAY,YAAY,MAAM,MAAM,QAAQ,MAAM;AAC1E,MAAI,KAAK,SAAS,eAAe,YAAY;AAE7C,WAAS,eAAe,YAAY,YAAY;AAChD,SAAO;AAAA;",
+  "names": []
+}

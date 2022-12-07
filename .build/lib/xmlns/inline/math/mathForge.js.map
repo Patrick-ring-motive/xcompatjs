@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../lib/xmlns/inline/math/mathForge.js"],
+  "sourcesContent": ["/* <![CDATA[/* */\nvar MATHForge = document.createElement('div');\nMATHForge.style.visibility = 'hidden';\nMATHForge.style.maxHeight = '0px';\nMATHForge.innerHTML = '<math id=\"MATHForge\" style=\"visibility: hidden; max-height: 0px;\"></math>';\n\nvar MATHStage = document.createElement('div');\nMATHStage.id = 'MATHStage';\nMATHStage.style.visibility = 'hidden';\nMATHStage.style.maxHeight = '0px';\n\ndocument.body.appendChild(MATHForge);\ndocument.body.appendChild(MATHStage);\n\ndocument.createMATHElement = function(tag) {\n  document.getElementById('MATHForge').innerHTML = '<' + tag + '></' + tag + '>';\n  let tg = document.getElementById('MATHForge').firstElementChild;\n  document.getElementById('MATHStage').appendChild(tg);\n  return tg;\n}\n /* ]]>/* */\n"],
+  "mappings": "AACA,IAAI,YAAY,SAAS,cAAc;AACvC,UAAU,MAAM,aAAa;AAC7B,UAAU,MAAM,YAAY;AAC5B,UAAU,YAAY;AAEtB,IAAI,YAAY,SAAS,cAAc;AACvC,UAAU,KAAK;AACf,UAAU,MAAM,aAAa;AAC7B,UAAU,MAAM,YAAY;AAE5B,SAAS,KAAK,YAAY;AAC1B,SAAS,KAAK,YAAY;AAE1B,SAAS,oBAAoB,SAAS,KAAK;AACzC,WAAS,eAAe,aAAa,YAAY,MAAM,MAAM,QAAQ,MAAM;AAC3E,MAAI,KAAK,SAAS,eAAe,aAAa;AAC9C,WAAS,eAAe,aAAa,YAAY;AACjD,SAAO;AAAA;",
+  "names": []
+}

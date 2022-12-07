@@ -1,0 +1,37 @@
+var documentSource = '<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml"><head></head><body></body></html>';
+var blob = new Blob([documentSource], { type: "application/xhtml+xml" });
+var XHTMLUrl = URL.createObjectURL(blob);
+var XHTMLLoader = document.createElement("link");
+XHTMLLoader.crossorigin = "anonymous";
+XHTMLLoader.rel = "preload";
+XHTMLLoader.href = XHTMLUrl;
+XHTMLLoader.as = "document";
+XHTMLLoader.type = "application/xhtml+xml";
+XHTMLLoader.fetchPriority = "high";
+XHTMLLoader.setAttribute("fetchpriority", "high");
+XHTMLLoader.loading = "eager";
+document.head.appendChild(XHTMLLoader);
+var XHTMLForge = document.createElement("iframe");
+XHTMLForge.id = "XHTMLForge";
+XHTMLForge.style.visibility = "hidden";
+XHTMLForge.style.maxHeight = "0px";
+XHTMLForge.fetchPriority = "high";
+XHTMLForge.setAttribute("fetchpriority", "high");
+XHTMLForge.loading = "eager";
+XHTMLForge.setAttribute("loading", "eager");
+XHTMLForge.src = XHTMLUrl;
+var XHTMLStage = document.createElement("div");
+XHTMLStage.id = "XHTMLStage";
+XHTMLStage.style.visibility = "hidden";
+XHTMLStage.style.maxHeight = "0px";
+document.body.prepend(XHTMLForge);
+document.body.prepend(XHTMLStage);
+document.createXHTMLElement = function(tag) {
+  let xf = document.getElementById("XHTMLForge");
+  let xfd = xf.contentDocument || xf.contentWindow.document;
+  xfd.body.innerHTML = "<" + tag + "></" + tag + ">";
+  let tg = xfd.body.firstElementChild;
+  document.getElementById("XHTMLStage").appendChild(tg);
+  return tg;
+};
+//# sourceMappingURL=xhtmlForge.js.map
