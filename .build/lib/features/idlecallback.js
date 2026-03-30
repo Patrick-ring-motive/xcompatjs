@@ -2,6 +2,7 @@ var wandow = window || self || exports;
 wandow.clearStub = function() {
   return;
 };
+
 function doSoon(fun) {
   if (wandow.setTimeout) {
     return wandow.setTimeout(fun, 10);
@@ -11,6 +12,7 @@ function doSoon(fun) {
     return fun();
   }
 }
+
 function doNow(fun) {
   if (wandow.setTimeout) {
     return wandow.setTimeout(fun, 0);

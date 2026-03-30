@@ -1,7 +1,9 @@
 /* <![CDATA[/* */
 
 var documentSource = '<?xsl version="1.0" encoding="UTF-8"?><body></body>';
-var blob = new Blob([documentSource], { type: "text/xsl" });
+var blob = new Blob([documentSource], {
+  type: "text/xsl"
+});
 XSLUrl = URL.createObjectURL(blob);
 
 var XSLLoader = document.createElement('link');
@@ -32,7 +34,6 @@ XSLStage.style.maxHeight = '0px';
 
 document.body.prepend(XSLForge);
 document.body.prepend(XSLStage);
-
 
 document.createXSLElement = function(tag) {
   let xf = document.getElementById('XSLForge');

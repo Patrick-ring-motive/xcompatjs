@@ -1,5 +1,7 @@
 var documentSource = '<?xsl version="1.0" encoding="UTF-8"?><body></body>';
-var blob = new Blob([documentSource], { type: "text/xsl" });
+var blob = new Blob([documentSource], {
+  type: "text/xsl"
+});
 XSLUrl = URL.createObjectURL(blob);
 var XSLLoader = document.createElement("link");
 XSLLoader.crossorigin = "anonymous";

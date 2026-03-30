@@ -1,7 +1,9 @@
 /* <![CDATA[/* */
 
 var documentSource = '<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml"><head></head><body></body></html>';
-var blob = new Blob([documentSource], { type: "application/xhtml+xml" });
+var blob = new Blob([documentSource], {
+  type: "application/xhtml+xml"
+});
 var XHTMLUrl = URL.createObjectURL(blob);
 
 var XHTMLLoader = document.createElement('link');
@@ -32,7 +34,6 @@ XHTMLStage.style.maxHeight = '0px';
 
 document.body.prepend(XHTMLForge);
 document.body.prepend(XHTMLStage);
-
 
 document.createXHTMLElement = function(tag) {
   let xf = document.getElementById('XHTMLForge');

@@ -1,7 +1,9 @@
 /* <![CDATA[/* */
 
 var documentSource = '<?xml version="1.0" encoding="UTF-8"?><body></body>';
-var blob = new Blob([documentSource], { type: "application/xml" });
+var blob = new Blob([documentSource], {
+  type: "application/xml"
+});
 XMLUrl = URL.createObjectURL(blob);
 
 var XMLLoader = document.createElement('link');
@@ -32,7 +34,6 @@ XMLStage.style.maxHeight = '0px';
 
 document.body.prepend(XMLForge);
 document.body.prepend(XMLStage);
-
 
 document.createXMLElement = function(tag) {
   let xf = document.getElementById('XMLForge');

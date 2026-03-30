@@ -5,10 +5,13 @@ for (let i = 0; i < forges.length; i++) {
     initXMLPlus(txtID);
   }
 }
+
 function initXMLPlus(xmlType) {
   let xmlTypeSmall = xmlType.toLowerCase();
   var documentSourceXML = '<?xml version="1.0" encoding="UTF-8"?><body></body>';
-  var blob = new Blob([documentSourceXML], { type: "application/" + xmlTypeSmall + "+xml" });
+  var blob = new Blob([documentSourceXML], {
+    type: "application/" + xmlTypeSmall + "+xml"
+  });
   XMLPlusUrl = URL.createObjectURL(blob);
   var XMLPlusForge = document.createElement("iframe");
   XMLPlusForge.id = xmlType + "Forge";

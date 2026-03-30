@@ -1,5 +1,7 @@
 var documentSource = '<?xml version="1.0" encoding="UTF-8"?><body></body>';
-var blob = new Blob([documentSource], { type: "application/xml" });
+var blob = new Blob([documentSource], {
+  type: "application/xml"
+});
 XMLUrl = URL.createObjectURL(blob);
 var XMLLoader = document.createElement("link");
 XMLLoader.crossorigin = "anonymous";

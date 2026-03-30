@@ -1,6 +1,5 @@
 /* <![CDATA[/* */
 
-
 var forges = document.querySelectorAll('script[xmlForgeType]');
 for (let i = 0; i < forges.length; i++) {
   let txtID = forges[i].getAttribute('xmlForgeType').toUpperCase();
@@ -8,19 +7,18 @@ for (let i = 0; i < forges.length; i++) {
 
     initXMLPlus(txtID);
 
-
   }
 }
-
 
 function initXMLPlus(xmlType) {
 
   let xmlTypeSmall = xmlType.toLowerCase();
 
   var documentSourceXML = '<?xml version="1.0" encoding="UTF-8"?><body></body>';
-  var blob = new Blob([documentSourceXML], { type: "application/" + xmlTypeSmall + "+xml" });
+  var blob = new Blob([documentSourceXML], {
+    type: "application/" + xmlTypeSmall + "+xml"
+  });
   XMLPlusUrl = URL.createObjectURL(blob);
-
 
   var XMLPlusForge = document.createElement('iframe');
   XMLPlusForge.id = xmlType + 'Forge';
@@ -44,12 +42,12 @@ function initXMLPlus(xmlType) {
 
   eval(`document.create` + xup + `Element=function(tag){
       
- let xf = document.getElementById('`+ xmlType + `Forge');
+ let xf = document.getElementById('` + xmlType + `Forge');
  let xfd = xf.contentDocument || xf.contentWindow.document;
  xfd.getElementsByTagName('body')[0].innerHTML='<'+tag+'></'+tag+'>';
       let tg = xfd.getElementsByTagName('body')[0].firstElementChild;
       
-        document.getElementById('`+ xup + `Stage').appendChild(tg);
+        document.getElementById('` + xup + `Stage').appendChild(tg);
         return tg;
         
       }

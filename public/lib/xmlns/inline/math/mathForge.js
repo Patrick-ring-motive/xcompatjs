@@ -18,4 +18,4 @@ document.createMATHElement = function(tag) {
   document.getElementById('MATHStage').appendChild(tg);
   return tg;
 }
- /* ]]>/* */
+/* ]]>/* */

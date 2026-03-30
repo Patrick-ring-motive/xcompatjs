@@ -22,7 +22,10 @@
       args[i] = arguments[i + 1];
     }
     // Store and register the task
-    var task = { callback: callback, args: args };
+    var task = {
+      callback: callback,
+      args: args
+    };
     tasksByHandle[nextHandle] = task;
     registerImmediate(nextHandle);
     return nextHandle++;
@@ -77,7 +80,9 @@
 
   function installNextTickImplementation() {
     registerImmediate = function(handle) {
-      process.nextTick(function() { runIfPresent(handle); });
+      process.nextTick(function() {
+        runIfPresent(handle);
+      });
     };
   }
 
