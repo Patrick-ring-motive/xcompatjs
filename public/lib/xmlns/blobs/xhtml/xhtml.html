@@ -6,31 +6,27 @@
 </head>
 
 <body bgcolor="#dae1ed">
-  <script src="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js"
-    href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js"
-    xlink:href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js"></script>
-  <script src="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js"
-    href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js"
-    xlink:href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js"></script>
+  <script src="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js" href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js" xlink:href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/append.js"></script>
+  <script src="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js" href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js" xlink:href="https://patrick-ring-motive.github.io/xcompatjs/public/lib/features/idlecallback.js"></script>
   <script src="xhtmlForge.js" href="xhtmlForge.js" xlink:href="xhtmlForge.js"></script>
   <script defer type="module" loading="lazy" fetchpriority="low">
     /* <![CDATA[/* */
-    requestIdleCallback(function () {
-
+    requestIdleCallback(function() {
 
       var t = document.createXHTMLElement('P');
-      console.log({t}, t.namespaceURI);
-      t.innerText='This is an xhtml element P. Namespace:'+t.namespaceURI;
+      console.log({
+        t
+      }, t.namespaceURI);
+      t.innerText = 'This is an xhtml element P. Namespace:' + t.namespaceURI;
       document.body.appendChild(t);
 
       var h = document.createElement('P');
-            h.innerText='This is an html element P. Namespace:'+h.namespaceURI;
+      h.innerText = 'This is an html element P. Namespace:' + h.namespaceURI;
       document.body.appendChild(h);
-
-
 
     });
     /* ]]>/* */
+
   </script>
 
 </body>
